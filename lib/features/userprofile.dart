@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
@@ -45,23 +45,23 @@ class UserProfile extends StatelessWidget {
                     backgroundImage: AssetImage('assets/profilepic.jpg'),
                     radius: 50.0,
                   ),
-                  SizedBox(width: 20.0), // Add spacing between the profile picture and text
+                  SizedBox(width: 20.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Rosie Kim", // Username
+                        "Rosie Kim",
                         style: TextStyle(
-                          fontSize: 20, // Adjust font size as needed
+                          fontSize: 16,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),
                       ),
-                      SizedBox(height: 8.0), // Add spacing below the username
+                      SizedBox(height: 1.0),
                       Text(
                         "Edit Profile Photo",
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 12,
                           fontWeight: FontWeight.normal,
                           color: customGray,
                           decoration: TextDecoration.underline,
@@ -70,10 +70,10 @@ class UserProfile extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Spacer(), // Add a spacer to push the age and gender to the right
+                  Spacer(),
                 ],
               ),
-              SizedBox(height: 8.0), // Add spacing below the row
+              SizedBox(height: 40.0),
               Row(
                 children: [
                   Text(
@@ -84,15 +84,15 @@ class UserProfile extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 8.0), // Add spacing between "Age:" and value
+                  SizedBox(width: 8.0),
                   Text(
-                    "21", // Replace with the actual age value
+                    "21",
                     style: TextStyle(
                       fontSize: 16,
                       color: customGray,
                     ),
                   ),
-                  SizedBox(width: 16.0), // Add spacing between age and gender
+                  SizedBox(width: 85.0),
                   Text(
                     "Gender:",
                     style: TextStyle(
@@ -101,9 +101,9 @@ class UserProfile extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 8.0), // Add spacing between "Gender:" and value
+                  SizedBox(width: 8.0),
                   Text(
-                    "Female", // Replace with the actual gender value
+                    "Female",
                     style: TextStyle(
                       fontSize: 16,
                       color: customGray,
@@ -111,7 +111,7 @@ class UserProfile extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 8.0), // Add spacing below the age and gender
+              SizedBox(height: 20.0),
               Row(
                 children: [
                   Text(
@@ -122,15 +122,15 @@ class UserProfile extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 8.0), // Add spacing between "Weight:" and value
+                  SizedBox(width: 8.0),
                   Text(
-                    "150 lbs", // Replace with the actual weight value
+                    "150 lbs",
                     style: TextStyle(
                       fontSize: 16,
                       color: customGray,
                     ),
                   ),
-                  SizedBox(width: 16.0), // Add spacing between weight and height
+                  SizedBox(width: 16.0),
                   Text(
                     "Height:",
                     style: TextStyle(
@@ -139,9 +139,9 @@ class UserProfile extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 8.0), // Add spacing between "Height:" and value
+                  SizedBox(width: 8.0),
                   Text(
-                    "5'6\"", // Replace with the actual height value
+                    "5'6\"",
                     style: TextStyle(
                       fontSize: 16,
                       color: customGray,
@@ -149,8 +149,7 @@ class UserProfile extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 16.0), // Add spacing below the weight and height
-              // Add Dropdowns for Weight Goal, Weight Target Goal, and Activity Level
+              SizedBox(height: 50.0),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -163,24 +162,25 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   DropdownButton<String>(
-                    items: <String>['Lose Weight', 'Maintain Weight', 'Gain Weight'] // Replace with your weight goal options
-                        .map((String value) {
+                    items: <String>[
+                      'Lose Weight',
+                      'Maintain Weight',
+                      'Gain Weight'
+                    ].map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
                         child: Text(
                           value,
                           style: TextStyle(
                             fontSize: 16,
-                            color: customGray,
+                            color: Colors.black,
                           ),
                         ),
                       );
                     }).toList(),
-                    onChanged: (String? newValue) {
-                      // Handle weight goal dropdown change
-                    },
+                    onChanged: (String? newValue) {},
                   ),
-                  SizedBox(height: 16.0), // Add spacing between dropdowns
+                  SizedBox(height: 16.0),
                   Text(
                     "Weight Target Goal:",
                     style: TextStyle(
@@ -190,7 +190,11 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   DropdownButton<String>(
-                    items: <String>['Lose Weight', 'Maintain Weight', 'Gain Weight'] // Replace with your weight target goal options
+                    items: <String>[
+                      'Lose Weight',
+                      'Maintain Weight',
+                      'Gain Weight'
+                    ] // Replace with your weight target goal options
                         .map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
@@ -198,16 +202,14 @@ class UserProfile extends StatelessWidget {
                           value,
                           style: TextStyle(
                             fontSize: 16,
-                            color: customGray,
+                            color: Colors.black,
                           ),
                         ),
                       );
                     }).toList(),
-                    onChanged: (String? newValue) {
-                      // Handle weight target goal dropdown change
-                    },
+                    onChanged: (String? newValue) {},
                   ),
-                  SizedBox(height: 16.0), // Add spacing between dropdowns
+                  SizedBox(height: 16.0),
                   Text(
                     "Activity Level:",
                     style: TextStyle(
@@ -217,40 +219,39 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                   DropdownButton<String>(
-                    items: <String>['Sedentary', 'Lightly Active', 'Moderately Active', 'Very Active'] // Replace with your activity level options
-                        .map((String value) {
+                    items: <String>[
+                      'Sedentary',
+                      'Lightly Active',
+                      'Moderately Active',
+                      'Very Active'
+                    ].map((String value) {
                       return DropdownMenuItem<String>(
                         value: value,
                         child: Text(
                           value,
                           style: TextStyle(
                             fontSize: 16,
-                            color: customGray,
+                            color: Colors.black,
                           ),
                         ),
                       );
                     }).toList(),
-                    onChanged: (String? newValue) {
-                      // Handle activity level dropdown change
-                    },
+                    onChanged: (String? newValue) {},
                   ),
-                  SizedBox(height: 16.0), // Add spacing below the dropdowns
-              // Add "Save Profile" button
-              ElevatedButton(
-                onPressed: () {
-                  // Handle "Save Profile" button click
-                  // You can access the selected values using weightGoalValue, weightTargetValue, and activityLevelValue.
-                },
-                child: Text(
-                  "Save Profile",
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
+                  SizedBox(height: 20.0),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text(
+                        "Save Profile",
+                        style: TextStyle(fontSize: 13),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
           ),
-          
         ),
       ),
     );

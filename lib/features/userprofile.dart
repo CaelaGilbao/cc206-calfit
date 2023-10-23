@@ -10,250 +10,267 @@ class UserProfile extends StatelessWidget {
     Color customBlue = Color(int.parse("0xFF0C2D48"));
     Color customGray = Color(int.parse("0xFFABABAB"));
 
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: customBlue,
-        title: Text(
-          "Profile",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text(
+              'Profile',
+              style: TextStyle(
+                fontSize: 15,
+              ),
+            ),
+            backgroundColor: customBlue,
+            centerTitle: true,
+            elevation: 0.0,
+            leading: Icon(Icons.arrow_back),
           ),
-        ),
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        centerTitle: true,
-      ),
-      body: Container(
-        color: customBlue,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage('assets/profilepic.jpg'),
-                    radius: 50.0,
-                  ),
-                  SizedBox(width: 20.0),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Rosie Kim",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                      SizedBox(height: 1.0),
-                      Text(
-                        "Edit Profile Photo",
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                          color: customGray,
-                          decoration: TextDecoration.underline,
-                          decorationColor: customGray,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                ],
-              ),
-              SizedBox(height: 40.0),
-              Row(
-                children: [
-                  Text(
-                    "Age:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
+          body: Container(
+            color: customBlue,
+            padding: const EdgeInsets.all(20.0),
+            child: ListView(
+              children: <Widget>[
+                Row(
+                  //mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/profilepic.jpg'),
+                      radius: 35.0,
                     ),
-                  ),
-                  SizedBox(width: 8.0),
-                  Text(
-                    "21",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: customGray,
-                    ),
-                  ),
-                  SizedBox(width: 85.0),
-                  Text(
-                    "Gender:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(width: 8.0),
-                  Text(
-                    "Female",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: customGray,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 20.0),
-              Row(
-                children: [
-                  Text(
-                    "Weight:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(width: 8.0),
-                  Text(
-                    "150 lbs",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: customGray,
-                    ),
-                  ),
-                  SizedBox(width: 16.0),
-                  Text(
-                    "Height:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(width: 8.0),
-                  Text(
-                    "5'6\"",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: customGray,
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 50.0),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Weight Goal:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  DropdownButton<String>(
-                    items: <String>[
-                      'Lose Weight',
-                      'Maintain Weight',
-                      'Gain Weight'
-                    ].map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {},
-                  ),
-                  SizedBox(height: 16.0),
-                  Text(
-                    "Weight Target Goal:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  DropdownButton<String>(
-                    items: <String>[
-                      'Lose Weight',
-                      'Maintain Weight',
-                      'Gain Weight'
-                    ] // Replace with your weight target goal options
-                        .map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {},
-                  ),
-                  SizedBox(height: 16.0),
-                  Text(
-                    "Activity Level:",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  DropdownButton<String>(
-                    items: <String>[
-                      'Sedentary',
-                      'Lightly Active',
-                      'Moderately Active',
-                      'Very Active'
-                    ].map((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(
-                          value,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: Colors.black,
-                          ),
-                        ),
-                      );
-                    }).toList(),
-                    onChanged: (String? newValue) {},
-                  ),
-                  SizedBox(height: 20.0),
-                  Center(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        "Save Profile",
-                        style: TextStyle(fontSize: 13),
+                    SizedBox(width: 18.0),
+                    Text(
+                      'Edit profile picture',
+                      style: TextStyle(
+                        fontSize: 11.0,
+                        decoration: TextDecoration.underline,
+                        color: customGray,
                       ),
                     ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 50.0),
+                    Text(
+                      'Username',
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: customGray,
+                      ),
+                    ),
+                    SizedBox(width: 20.0),
+                    Text(
+                      'Rosie Kim',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 50.0),
+                    Text(
+                      'Age',
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: customGray,
+                      ),
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      '20',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 4.0),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 13.0,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 85.0),
+                    Text(
+                      'Gender',
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: customGray,
+                      ),
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      'Female',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 4.0),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 13.0,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 50.0),
+                    Text(
+                      'Weight',
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: customGray,
+                      ),
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      '72 kg',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 4.0),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 13.0,
+                      color: Colors.white,
+                    ),
+                    SizedBox(width: 42.0),
+                    Text(
+                      'Height',
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        color: customGray,
+                      ),
+                    ),
+                    SizedBox(width: 15.0),
+                    Text(
+                      '5\'2 ft',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(width: 4.0),
+                    Icon(
+                      Icons.keyboard_arrow_down,
+                      size: 13.0,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 70.0),
+                    Text(
+                      "Weight Goal",
+                      style: TextStyle(
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 20.0),
+                    DropdownButton<String>(
+                      items: <String>[
+                        'Lose Weight',
+                        'Maintain Weight',
+                        'Gain Weight'
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {},
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 70.0),
+                    Text(
+                      "Weight Target",
+                      style: TextStyle(
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 8.0),
+                    DropdownButton<String>(
+                      items: <String>[
+                        'Lose Weight',
+                        'Maintain Weight',
+                        'Gain Weight'
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {},
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    SizedBox(height: 70.0),
+                    Text(
+                      "Activity Level",
+                      style: TextStyle(
+                        fontSize: 13.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(width: 12.0),
+                    DropdownButton<String>(
+                      items: <String>[
+                        'Sedentary',
+                        'Lightly Active',
+                        'Moderate Active',
+                        'Very Active'
+                      ].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(
+                            value,
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {},
+                    ),
+                  ],
+                ),
+                SizedBox(height: 45.0),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "Save Profile",
+                    style: TextStyle(fontSize: 13),
                   ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
+                ),
+              ],
+            ),
+          )),
     );
   }
 }

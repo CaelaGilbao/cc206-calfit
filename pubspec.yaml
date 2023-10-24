@@ -20,3 +20,4 @@ flutter:
   assets:
     - assets/
     - assets/profilepic.jpg
+    - assets/logo.png

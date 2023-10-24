@@ -270,7 +270,8 @@ class UserProfile extends StatelessWidget {
                 ),
               ],
             ),
-          )),
+          )
+        ),
     );
   }
 }

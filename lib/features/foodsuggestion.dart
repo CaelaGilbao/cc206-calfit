@@ -70,7 +70,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image1.png'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Breakfast',
                               style: TextStyle(
@@ -90,7 +92,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image2.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Lunch',
                               style: TextStyle(
@@ -119,7 +123,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image3.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Dinner',
                               style: TextStyle(
@@ -139,7 +145,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image4.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Snack',
                               style: TextStyle(
@@ -168,7 +176,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image5.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Snacks',
                               style: TextStyle(
@@ -188,7 +198,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image6.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Drinks',
                               style: TextStyle(

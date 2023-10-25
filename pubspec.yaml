@@ -20,6 +20,7 @@ flutter:
   assets:
     - assets/
     - assets/profilepic.jpg
+    - assets/avatar.png
     - assets/logo.png
     - assets/image1.png
     - assets/image2.jpg

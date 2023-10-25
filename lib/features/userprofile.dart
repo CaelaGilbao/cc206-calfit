@@ -32,9 +32,9 @@ class UserProfile extends StatelessWidget {
                 Row(
                   //mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    CircleAvatar(
-                      backgroundImage: AssetImage('assets/profilepic.jpg'),
-                      radius: 35.0,
+                    Image.asset(
+                      'assets/avatar.png',
+                      height: 90,
                     ),
                     SizedBox(width: 18.0),
                     Text(
@@ -270,8 +270,7 @@ class UserProfile extends StatelessWidget {
                 ),
               ],
             ),
-          )
-        ),
+          )),
     );
   }
 }

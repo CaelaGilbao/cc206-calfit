@@ -6,7 +6,6 @@ class FoodSuggestion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Color customBlue = Color(int.parse("0xFF0C2D48"));
-    Color customGray = Color(int.parse("0xFFABABAB"));
 
     return MaterialApp(
       home: Scaffold(
@@ -43,7 +42,7 @@ class FoodSuggestion extends StatelessWidget {
                     Icons.menu_rounded,
                     color: Colors.white,
                     size: 25,
-                  )
+                  ),
                 ],
               ),
               SizedBox(height: 20),
@@ -56,6 +55,153 @@ class FoodSuggestion extends StatelessWidget {
                     fontSize: 15,
                   ),
                 ),
+              ),
+              SizedBox(height: 20),
+              // First Column with Two Boxes
+              Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      // Box 1 (left)
+                      Container(
+                        width: 150,
+                        height: 200,
+                        color: Colors.blue,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image1.png'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Breakfast',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      // Box 2 (right)
+                      Container(
+                        width: 150,
+                        height: 200,
+                        color: Colors.green,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image2.jpg'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Lunch',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              // Second Column with Two Boxes
+              Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      // Box 1 (left)
+                      Container(
+                        width: 150,
+                        height: 200,
+                        color: Colors.red,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image3.jpg'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Dinner',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      // Box 2 (right)
+                      Container(
+                        width: 150,
+                        height: 150,
+                        color: Colors.yellow,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image4.jpg'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Snack',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 20),
+              // Third Column with Two Boxes (Add your new set of images and text here)
+              Column(
+                children: <Widget>[
+                  Row(
+                    children: <Widget>[
+                      // Box 1 (left)
+                      Container(
+                        width: 150,
+                        height: 200,
+                        color: Colors.orange,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image5.jpg'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Snacks',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(width: 20),
+                      // Box 2 (right)
+                      Container(
+                        width: 150,
+                        height: 200,
+                        color: Colors.purple,
+                        child: Column(
+                          children: <Widget>[
+                            Image.asset('assets/image6.jpg'),
+                            SizedBox(height: 10), // Add spacing between image and text
+                            Text(
+                              'Drinks',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ],
           ),

@@ -32,8 +32,7 @@ class FoodSuggestion extends StatelessWidget {
                   Text(
                     'Dashboard',
                     style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
                       color: Colors.white,
                     ),
                   ),
@@ -52,7 +51,7 @@ class FoodSuggestion extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 15,
+                    fontSize: 18,
                   ),
                 ),
               ),
@@ -70,7 +69,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image1.png'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Breakfast',
                               style: TextStyle(
@@ -90,7 +91,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image2.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Lunch',
                               style: TextStyle(
@@ -119,7 +122,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image3.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Dinner',
                               style: TextStyle(
@@ -139,7 +144,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image4.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Snack',
                               style: TextStyle(
@@ -168,7 +175,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image5.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Snacks',
                               style: TextStyle(
@@ -188,7 +197,9 @@ class FoodSuggestion extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             Image.asset('assets/image6.jpg'),
-                            SizedBox(height: 10), // Add spacing between image and text
+                            SizedBox(
+                                height:
+                                    10), // Add spacing between image and text
                             Text(
                               'Drinks',
                               style: TextStyle(
